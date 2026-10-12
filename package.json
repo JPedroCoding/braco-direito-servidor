@@ -1,0 +1,16 @@
+{
+  "name": "braco-direito-servidor",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env src/server.js",
+    "dev": "node --env-file=.env --watch src/server.js",
+    "test": "node --test",
+    "gerar-chave": "node -e \"console.log(require('crypto').randomBytes(32).toString('base64'))\"",
+    "testar-local": "node --env-file=.env scripts/testar-local.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "multer": "^2.0.2"
+  }
+}
